@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: dev
+    default: dev
+  application:
+    name: Eureka-Server
+  output:
+    ansi:
+      enabled: ALWAYS
+
+eureka:
+  server:
+  environment: Development
+  datacenter: Development
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  dashboard:
+    enabled: true
