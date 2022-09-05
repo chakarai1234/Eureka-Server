@@ -1,19 +1,25 @@
 spring:
+  ## Declare the default and active profiles
   profiles:
     active: dev
     default: dev
+  ## Declare the Applicationn name
   application:
     name: Eureka-Server
+  ## Declare the ansi colors for the terminal
   output:
     ansi:
       enabled: ALWAYS
 
 eureka:
-  server:
+  ## Declare the environment name
   environment: Development
+  ## Declare the datacenter name
   datacenter: Development
+  ## Since it is Eureka server dont need to register and fetch the registry
   client:
     register-with-eureka: false
     fetch-registry: false
+  ## enabling the dashboard for eureka server
   dashboard:
     enabled: true
