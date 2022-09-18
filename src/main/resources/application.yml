@@ -5,7 +5,7 @@ spring:
     default: dev
   ## Declare the Applicationn name
   application:
-    name: Eureka-Server
+    name: ms-eureka-server
   ## Declare the ansi colors for the terminal
   output:
     ansi:
@@ -23,3 +23,6 @@ eureka:
   ## enabling the dashboard for eureka server
   dashboard:
     enabled: true
+
+application:
+  version: @project.version@
