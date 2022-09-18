@@ -1,3 +1,10 @@
 server:
   ## Declaring the port for the Eureka server
   port: 8761
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "*"
