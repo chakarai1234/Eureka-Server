@@ -1,18 +1,14 @@
-management:
-  endpoints:
-    web:
-      exposure:
-        include:
-          - "*"
 eureka:
   ## Declare the environment name
-  environment: Development
+  environment: Docker
   ## Declare the datacenter name
-  datacenter: Development
+  datacenter: Docker
   ## Since it is Eureka server dont need to register and fetch the registry
   client:
     register-with-eureka: false
     fetch-registry: false
+    service-url:
+      defaultZone: "http://eureka:8761/eureka"
   ## enabling the dashboard for eureka server
   dashboard:
     enabled: true

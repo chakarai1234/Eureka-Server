@@ -1,8 +1,11 @@
+server:
+  port: 8761
+
 spring:
   ## Declare the default and active profiles
   profiles:
-    active: dev
     default: dev
+    active: dev
   ## Declare the Applicationn name
   application:
     name: ms-eureka-server
@@ -10,19 +13,6 @@ spring:
   output:
     ansi:
       enabled: ALWAYS
-
-eureka:
-  ## Declare the environment name
-  environment: Development
-  ## Declare the datacenter name
-  datacenter: Development
-  ## Since it is Eureka server dont need to register and fetch the registry
-  client:
-    register-with-eureka: false
-    fetch-registry: false
-  ## enabling the dashboard for eureka server
-  dashboard:
-    enabled: true
 
 application:
   version: @project.version@
