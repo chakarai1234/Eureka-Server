@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh mvn clean package -P docker
+                sh 'mvn clean package -P docker'
             }
         }
         stage('Test') {
@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                mvn deploy -P docker
+                sh "mvn deploy -P docker"
             }
         }
     }
