@@ -13,7 +13,6 @@ pipeline {
                 echo "========================"
                 sh 'mvn clean package -DskipTests -P docker'
                 echo "Finished Building..."
-                echo "========================"
             }
         }
         stage('Test') {
@@ -22,7 +21,6 @@ pipeline {
                 echo 'Testing...'
                 echo "========================"
                 sh 'mvn test -P docker'
-                echo "========================"
             }
         }
         stage('Deploy') {
@@ -31,7 +29,6 @@ pipeline {
                 echo 'Deploying to Nexus Repository...'
                 echo "========================"
                 sh "mvn deploy -DskipTests -P docker"
-                echo "========================"
             }
         }
     }
