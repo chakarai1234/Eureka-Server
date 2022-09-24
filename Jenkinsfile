@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh "mvn deploy-DskipTests -P docker"
+                sh "mvn deploy -DskipTests -P docker"
             }
         }
     }
